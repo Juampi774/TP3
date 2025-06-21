@@ -9,8 +9,16 @@ int main()
     //Se solicita al usuario que ingrese su peso y altura
     printf("Ingrese el peso en kg: \n");
     scanf("%f", &peso);
+    while (peso <= 0) {
+        printf("Peso invalido. Debe ser mayor a 0. Intente nuevamente: ");
+        scanf("%f", &peso);
+    }
     printf("Ingrese la altura en metros: \n");
     scanf("%f", &altura);
+    while (altura <= 0) {
+        printf("Altura invalida. Debe ser mayor a 0. Intente nuevamente: ");
+        scanf("%f", &altura);
+    }
 
     //Se calcula el BMI
     bmi = peso / (altura * altura);
